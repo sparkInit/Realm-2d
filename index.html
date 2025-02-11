@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tauri App</title>
+    <script type="module" src="/src/main.ts" defer></script>
+  </head>
+
+  <body class="h-screen flex bg-background-950 text-text-50 overflow-hidden select-none">
+    <!-- Sidebar -->
+    <aside class="w-56 bg-background-900">
+      <div class="p-4 border-b border-background-700 font-heading text-text-300 font-semibold text-lg flex justify-between items-center">
+        <p>R2D</p>
+        <p class="text-sm bg-secondary-800 rounded-lg p-2">launchpad</p>
+      </div>
+      <div class="w-full h-[85%] flex flex-col gap-2 p-2">
+        <button class="side-nav" data-section="projects" title="Projects">Projects</button>
+        <button class="side-nav" data-section="templates" title="Templates">Templates</button> 
+        <button class="side-nav" data-section="marketplace" title="Marketplace">Marketplace</button> 
+        <button class="side-nav" data-section="docs" title="Documentation">Docs</button> 
+        <button class="side-nav" data-section="settings" title="Settings">Settings</button> 
+        <button class="side-nav mt-auto" data-section="help" title="Help">Help</button> 
+      </div>
+    </aside>
+    
+    <!-- Main Bar -->
+    <main class="flex-1 p-6 h-full overflow-hidden">
+    
+      
+      <section class="w-full h-full overflow-hidden">
+        <div id="projects" class="hidden nav-content">
+          <div class="nav-inner-content">
+            <nav class="flex gap-6 border-b border-gray-700 pb-2 mb-4">
+              <button data-section="recent-project" class="tab-btn active-tab">Recent Projects</button>
+              <button data-section="new-project" class="tab-btn">New Project</button>
+            </nav>
+            
+            <div id="recent-project" class="projects-content">
+              <div class="recent-project">
+                <h3 class="text-lg font-semibold">Demo Project</h3>
+                <p class="text-sm text-gray-400">Last opened: Today</p>
+              </div>
+            </div>
+
+            <div id="new-project" class="hidden projects-content">
+              <div class="p-6 bg-background-800 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-semibold mb-4">Create a New Project</h2>
+                <div class="space-y-4">
+                  <label class="block text-gray-300 text-sm font-medium">Project Name</label>
+                  <input type="text" placeholder="Enter project name" class="w-full p-3 rounded-lg bg-background-700 text-text-50 placeholder-text-400 focus:outline-none focus:ring-2 focus:ring-accent-400">
+                  
+                  <label class="block text-gray-300 text-sm font-medium">Project Type</label>
+                  <select class="w-full p-3 rounded-lg bg-background-700 text-text focus:outline-none">
+                    <option value="empty">Empty Project</option>
+                    <option value="platformer">Platformer Starter</option>
+                    <option value="shooter">Shooter Starter</option>
+                    <option value="rpg">RPG Starter</option>
+                    <option value="puzzle">Puzzle Starter</option>
+                  </select>
+                  
+                  <label class="block text-text-300 text-sm font-medium">Project Location</label>
+                  <div class="flex gap-2">
+                    <input type="text" placeholder="Select File Path" class="w-full p-3 rounded-lg bg-background-700 text-text-50 placeholder-text-400 focus:outline-none">
+                    <button class="px-4 py-3 bg-background-600 hover:bg-background-500 rounded-lg">📂</button>
+                  </div>
+                  
+                  <label class="flex items-center space-x-2 text-gray-300 text-sm">
+                    <input type="checkbox" class="form-checkbox bg-secondary-700 border-gray-500 rounded w-4 h-4">
+                    <span>Initialize Git repository</span>
+                  </label>
+                  
+                  <button class="w-full bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 rounded-lg mt-4">
+                    Create Project
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <div id="templates" class="nav-content">
+          <div class="nav-inner-content">
+            <nav class="flex gap-6 border-b border-gray-700 pb-2 mb-4">
+              <button data-section="all-templates" class="tab-btn active-tab">All Templates</button>
+              <button data-section="my-templates" class="tab-btn">My Templates</button>
+              <button data-section="new-templates" class="tab-btn">New Template</button>
+            </nav>
+
+            <div id="all-templates" class="templates-content">
+              <div class="template">
+                <div class="template-thumbnail"></div>
+                <div class="flex flex-col">
+                  <p class="template-title">platformer starter</p>
+                  <p class="template-description">a basic starter template to you setup a platformer quickly</p>
+                </div>
+                <div class="flex flex-col">
+                  <div class="template-status">download</div>
+                  <div class="template-author"><span>by</span>@mohazz</div>
+                </div>
+                <div class="template-download-bar">
+                  <p>from github</p>
+                  <div class="template-download-progress"></div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div id="my-templates" class="hidden templates-content">my</div>
+            <div id="new-templates" class="hidden templates-content">new</div>
+          </div>
+        </div>
+        
+
+
+
+
+        <div id="marketplace" class="hidden nav-content">marketplace Section</div>
+        <div id="docs" class="hidden nav-content">docs Section</div>
+        <div id="settings" class="hidden nav-content">settings Section</div>
+        <div id="help" class="hidden nav-content">help Section</div>
+      </section>
+    </main>
+  </body>
+</html>
