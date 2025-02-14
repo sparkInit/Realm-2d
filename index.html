@@ -8,35 +8,53 @@
     <script type="module" src="/src/main.ts" defer></script>
   </head>
 
-  <body class="h-screen flex bg-background-950 text-text-50 overflow-hidden select-none">
+  <body
+    class="h-screen flex bg-background-100 dark:bg-background-950 text-text-50 overflow-hidden select-none"
+  >
     <!-- Sidebar -->
-    <aside class="w-56 bg-background-900">
-      <div class="p-4 border-b border-background-700 font-heading text-text-300 font-semibold text-lg flex justify-between items-center">
+    <aside class="w-56 bg-background-100 dark:bg-background-900 border-r border-background-400">
+      <div
+        class="p-4 border-b border-background-700 font-heading text-text-300 font-semibold text-lg flex justify-between items-center"
+      >
         <p>R2D</p>
         <p class="text-sm bg-secondary-800 rounded-lg p-2">launchpad</p>
       </div>
       <div class="w-full h-[85%] flex flex-col gap-2 p-2">
-        <button class="side-nav" data-section="projects" title="Projects">Projects</button>
-        <button class="side-nav" data-section="templates" title="Templates">Templates</button> 
-        <button class="side-nav" data-section="marketplace" title="Marketplace">Marketplace</button> 
-        <button class="side-nav" data-section="docs" title="Documentation">Docs</button> 
-        <button class="side-nav" data-section="settings" title="Settings">Settings</button> 
-        <button class="side-nav mt-auto" data-section="help" title="Help">Help</button> 
+        <button class="side-nav" data-section="projects" title="Projects">
+          Projects
+        </button>
+        <button class="side-nav" data-section="templates" title="Templates">
+          Templates
+        </button>
+        <button class="side-nav" data-section="marketplace" title="Marketplace">
+          Marketplace
+        </button>
+        <button class="side-nav" data-section="docs" title="Documentation">
+          Docs
+        </button>
+        <button class="side-nav" data-section="settings" title="Settings">
+          Settings
+        </button>
+        <button class="side-nav mt-auto" data-section="help" title="Help">
+          Help
+        </button>
       </div>
     </aside>
-    
+
     <!-- Main Bar -->
-    <main class="flex-1 p-6 h-full overflow-hidden">
-    
-      
+    <main class="flex-1 p-4 h-full overflow-hidden">
       <section class="w-full h-full overflow-hidden">
         <div id="projects" class="hidden nav-content">
           <div class="nav-inner-content">
             <nav class="flex gap-6 border-b border-gray-700 pb-2 mb-4">
-              <button data-section="recent-project" class="tab-btn active-tab">Recent Projects</button>
-              <button data-section="new-project" class="tab-btn">New Project</button>
+              <button data-section="recent-project" class="tab-btn active-tab">
+                Recent Projects
+              </button>
+              <button data-section="new-project" class="tab-btn">
+                New Project
+              </button>
             </nav>
-            
+
             <div id="recent-project" class="projects-content">
               <div class="recent-project">
                 <h3 class="text-lg font-semibold">Demo Project</h3>
@@ -46,81 +64,460 @@
 
             <div id="new-project" class="hidden projects-content">
               <div class="p-6 bg-background-800 rounded-lg shadow-lg">
-                <h2 class="text-2xl font-semibold mb-4">Create a New Project</h2>
+                <h2 class="text-2xl font-semibold mb-4">
+                  Create a New Project
+                </h2>
                 <div class="space-y-4">
-                  <label class="block text-gray-300 text-sm font-medium">Project Name</label>
-                  <input type="text" placeholder="Enter project name" class="w-full p-3 rounded-lg bg-background-700 text-text-50 placeholder-text-400 focus:outline-none focus:ring-2 focus:ring-accent-400">
-                  
-                  <label class="block text-gray-300 text-sm font-medium">Project Type</label>
-                  <select class="w-full p-3 rounded-lg bg-background-700 text-text focus:outline-none">
+                  <label class="block text-gray-300 text-sm font-medium"
+                    >Project Name</label
+                  >
+                  <input
+                    type="text"
+                    placeholder="Enter project name"
+                    class="w-full p-3 rounded-lg bg-background-700 text-text-50 placeholder-text-400 focus:outline-none focus:ring-2 focus:ring-accent-400"
+                  />
+
+                  <label class="block text-gray-300 text-sm font-medium"
+                    >Project Type</label
+                  >
+                  <select
+                    class="w-full p-3 rounded-lg bg-background-700 text-text focus:outline-none"
+                  >
                     <option value="empty">Empty Project</option>
                     <option value="platformer">Platformer Starter</option>
                     <option value="shooter">Shooter Starter</option>
                     <option value="rpg">RPG Starter</option>
                     <option value="puzzle">Puzzle Starter</option>
                   </select>
-                  
-                  <label class="block text-text-300 text-sm font-medium">Project Location</label>
+
+                  <label class="block text-text-300 text-sm font-medium"
+                    >Project Location</label
+                  >
                   <div class="flex gap-2">
-                    <input type="text" placeholder="Select File Path" class="w-full p-3 rounded-lg bg-background-700 text-text-50 placeholder-text-400 focus:outline-none">
-                    <button class="px-4 py-3 bg-background-600 hover:bg-background-500 rounded-lg">📂</button>
+                    <input
+                      type="text"
+                      placeholder="Select File Path"
+                      class="w-full p-3 rounded-lg bg-background-700 text-text-50 placeholder-text-400 focus:outline-none"
+                    />
+                    <button
+                      class="px-4 py-3 bg-background-600 hover:bg-background-500 rounded-lg"
+                    >
+                      📂
+                    </button>
                   </div>
-                  
-                  <label class="flex items-center space-x-2 text-gray-300 text-sm">
-                    <input type="checkbox" class="form-checkbox bg-secondary-700 border-gray-500 rounded w-4 h-4">
+
+                  <label
+                    class="flex items-center space-x-2 text-gray-300 text-sm"
+                  >
+                    <input
+                      type="checkbox"
+                      class="form-checkbox bg-secondary-700 border-gray-500 rounded w-4 h-4"
+                    />
                     <span>Initialize Git repository</span>
                   </label>
-                  
-                  <button class="w-full bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 rounded-lg mt-4">
+
+                  <button
+                    class="w-full bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 rounded-lg mt-4"
+                  >
                     Create Project
                   </button>
                 </div>
               </div>
             </div>
-            
           </div>
         </div>
 
-        <div id="templates" class="nav-content">
+        <div id="templates" class="hidden nav-content">
           <div class="nav-inner-content">
             <nav class="flex gap-6 border-b border-gray-700 pb-2 mb-4">
-              <button data-section="all-templates" class="tab-btn active-tab">All Templates</button>
-              <button data-section="my-templates" class="tab-btn">My Templates</button>
-              <button data-section="new-templates" class="tab-btn">New Template</button>
+              <button data-section="all-templates" class="tab-btn active-tab">
+                All Templates
+              </button>
+              <button data-section="my-templates" class="tab-btn">
+                My Templates
+              </button>
+              <button data-section="new-templates" class="tab-btn">
+                New Template
+              </button>
             </nav>
 
             <div id="all-templates" class="templates-content">
               <div class="template">
                 <div class="template-thumbnail"></div>
                 <div class="flex flex-col">
-                  <p class="template-title">platformer starter</p>
-                  <p class="template-description">a basic starter template to you setup a platformer quickly</p>
+                  <div class="flex flex-col gap-1">
+                    <p class="template-source">official</p>
+                    <p class="template-title">Platformer Starter</p>
+                  </div>
+                  <p class="template-description">
+                    A basic starter template to set up a platformer quickly.
+                  </p>
                 </div>
                 <div class="flex flex-col">
-                  <div class="template-status">download</div>
-                  <div class="template-author"><span>by</span>@mohazz</div>
+                  <div class="template-status">install</div>
+                  <div class="template-author"><span>by</span> R2D</div>
                 </div>
                 <div class="template-download-bar">
-                  <p>from github</p>
+                  <div class="template-download-progress"></div>
+                </div>
+              </div>
+
+              <div class="template">
+                <div class="template-thumbnail"></div>
+                <div class="flex flex-col">
+                  <div class="flex flex-col gap-1">
+                    <p class="template-source">official</p>
+                    <p class="template-title">Shooter Starter</p>
+                  </div>
+                  <p class="template-description">
+                    A basic shooter game template with enemy AI and shooting
+                    mechanics.
+                  </p>
+                </div>
+                <div class="flex flex-col">
+                  <div class="template-status">install</div>
+                  <div class="template-author"><span>by</span> R2D</div>
+                </div>
+                <div class="template-download-bar">
+                  <div class="template-download-progress"></div>
+                </div>
+              </div>
+
+              <div class="template">
+                <div class="template-thumbnail"></div>
+                <div class="flex flex-col">
+                  <div class="flex flex-col gap-1">
+                    <p class="template-source">official</p>
+                    <p class="template-title">RPG Starter</p>
+                  </div>
+                  <p class="template-description">
+                    A top-down RPG starter kit with basic movement and
+                    interactions.
+                  </p>
+                </div>
+                <div class="flex flex-col">
+                  <div class="template-status">install</div>
+                  <div class="template-author"><span>by</span> R2D</div>
+                </div>
+                <div class="template-download-bar">
+                  <div class="template-download-progress"></div>
+                </div>
+              </div>
+
+              <div class="template">
+                <div class="template-thumbnail"></div>
+                <div class="flex flex-col">
+                  <div class="flex flex-col gap-1">
+                    <p class="template-source">official</p>
+                    <p class="template-title">Puzzle Starter</p>
+                  </div>
+                  <p class="template-description">
+                    A simple drag-and-drop puzzle game template.
+                  </p>
+                </div>
+                <div class="flex flex-col">
+                  <div class="template-status">install</div>
+                  <div class="template-author"><span>by</span> R2D</div>
+                </div>
+                <div class="template-download-bar">
+                  <div class="template-download-progress"></div>
+                </div>
+              </div>
+
+              <div class="template">
+                <div class="template-thumbnail"></div>
+                <div class="flex flex-col">
+                  <div class="flex flex-col gap-1">
+                    <p class="template-source">official</p>
+                    <p class="template-title">Snake Game</p>
+                  </div>
+                  <p class="template-description">
+                    The classic Snake game recreated with simple mechanics.
+                  </p>
+                </div>
+                <div class="flex flex-col">
+                  <div class="template-status">install</div>
+                  <div class="template-author"><span>by</span> R2D</div>
+                </div>
+                <div class="template-download-bar">
+                  <div class="template-download-progress"></div>
+                </div>
+              </div>
+
+              <div class="template">
+                <div class="template-thumbnail"></div>
+                <div class="flex flex-col">
+                  <div class="flex flex-col gap-1">
+                    <p class="template-source">official</p>
+                    <p class="template-title">Pong Clone</p>
+                  </div>
+                  <p class="template-description">
+                    A simple Pong game with two-player mechanics.
+                  </p>
+                </div>
+                <div class="flex flex-col">
+                  <div class="template-status">install</div>
+                  <div class="template-author"><span>by</span> R2D</div>
+                </div>
+                <div class="template-download-bar">
                   <div class="template-download-progress"></div>
                 </div>
               </div>
             </div>
 
+            <div id="my-templates" class="hidden templates-content">
+              <div class="template">
+                <div class="template-thumbnail"></div>
+                <div class="flex flex-col">
+                  <div class="flex flex-col gap-1">
+                    <p class="template-source">official</p>
+                    <p class="template-title">Platformer Starter</p>
+                  </div>
+                  <p class="template-description">
+                    A basic starter template to set up a platformer quickly.
+                  </p>
+                </div>
+                <div class="flex flex-col">
+                  <div class="template-status">install</div>
+                  <div class="template-author"><span>by</span> R2D</div>
+                </div>
+                <div class="template-download-bar">
+                  <div class="template-download-progress"></div>
+                </div>
+              </div>
+            </div>
 
+            <div
+              id="new-templates"
+              class="hidden templates-content p-6 bg-secondary-800 rounded-lg shadow-lg"
+            >
+              <h2 class="text-2xl font-semibold text-text-100 mb-4">
+                Create a New Template
+              </h2>
 
-            <div id="my-templates" class="hidden templates-content">my</div>
-            <div id="new-templates" class="hidden templates-content">new</div>
+              <div class="space-y-4">
+                <!-- Thumbnail Upload -->
+                <label class="block text-gray-300 text-sm font-medium"
+                  >Thumbnail</label
+                >
+                <div class="flex items-center gap-3">
+                  <div
+                    class="h-20 w-32 bg-secondary-500 rounded-lg flex items-center justify-center text-text-100 text-sm"
+                  >
+                    No Image
+                  </div>
+                  <button
+                    class="px-4 py-2 bg-primary-600 hover:bg-primary-500 rounded-lg text-text-50 text-sm"
+                  >
+                    Upload
+                  </button>
+                </div>
+
+                <!-- Template Name -->
+                <label class="block text-gray-300 text-sm font-medium"
+                  >Template Name</label
+                >
+                <input
+                  type="text"
+                  placeholder="Enter template name"
+                  class="w-full p-3 rounded-lg bg-secondary-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
+
+                <!-- Description -->
+                <label class="block text-gray-300 text-sm font-medium"
+                  >Description</label
+                >
+                <textarea
+                  placeholder="Describe your template"
+                  class="w-full p-3 rounded-lg bg-secondary-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                ></textarea>
+
+                <!-- Category Selection -->
+                <label class="block text-gray-300 text-sm font-medium"
+                  >Category</label
+                >
+                <select
+                  class="w-full p-3 rounded-lg bg-secondary-700 text-white focus:outline-none"
+                >
+                  <option value="platformer">Platformer</option>
+                  <option value="shooter">Shooter</option>
+                  <option value="rpg">RPG</option>
+                  <option value="puzzle">Puzzle</option>
+                  <option value="custom">Custom</option>
+                </select>
+
+                <!-- Author Name -->
+                <label class="block text-gray-300 text-sm font-medium"
+                  >Author</label
+                >
+                <input
+                  type="text"
+                  placeholder="Your name or studio"
+                  class="w-full p-3 rounded-lg bg-secondary-700 text-white placeholder-text-400 focus:outline-none"
+                />
+
+                <!-- Optional URL -->
+                <label class="block text-text-300 text-sm font-medium"
+                  >GitHub/External URL (optional)</label
+                >
+                <input
+                  type="text"
+                  placeholder="Template repository or download URL"
+                  class="w-full p-3 rounded-lg bg-secondary-700 text-white placeholder-gray-400 focus:outline-none"
+                />
+
+                <!-- Create Template Button -->
+                <button
+                  class="w-full bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 rounded-lg mt-4"
+                >
+                  Create Template
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-        
 
+        <div id="marketplace" class="hidden nav-content">
+          <div class="nav-inner-content">
+            <nav class="flex gap-6 border-b border-gray-700 pb-2 mb-4">
+              <button data-section="all-templates" class="tab-btn active-tab">
+                marketplace
+              </button>
+              <button data-section="my-templates" class="tab-btn">
+                My library
+              </button>
+            </nav>
 
+            <div id="marketplace" class="marketplace-content">
+              <div class="flex justify-end gap-4">
+                <input
+                  type="search"
+                  placeholder="Search..."
+                  class="px-4 py-2 rounded-full bg-accent-50 w-1/2 text-text-950 outline-none"
+                />
+                <button
+                  class="px-4 py-2 rounded-lg bg-primary-500 hover:bg-primary-600 transition-colors hover:cursor-pointer"
+                >
+                  Search
+                </button>
+              </div>
+              <div class="flex justify-between items-center p-2 mt-4">
+                <button
+                  class="px-6 py-2 h-fit text-sm mr-auto rounded-lg bg-primary-500 hover:bg-primary-600 transition-colors hover:cursor-pointer"
+                >
+                  Filter
+                </button>
+                <div class="border w-3/4 h-14 rounded-md flex items-center justify-center text-text-400">
+                  <span>Tags: Official | Community</span>
+                </div>
+              </div>
+              <div class="p-2 space-y-2">
+                <div class="marketplace-item bg-secondary-800 p-4 rounded-lg shadow-md">
+                  <div class="flex gap-4">
+                    <div class="w-20 h-20 bg-secondary-700 rounded-lg"></div>
+                    <div class="flex flex-col">
+                      <p class="text-sm text-accent-400">Official</p>
+                      <h3 class="text-lg font-semibold">Platformer Starter</h3>
+                      <p class="text-sm text-text-400">A basic starter template to set up a platformer quickly.</p>
+                    </div>
+                  </div>
+                  <div class="flex justify-between mt-2">
+                    <span class="text-sm text-text-400">by R2D</span>
+                    <button class="px-4 py-2 bg-primary-500 hover:bg-primary-600 rounded-lg text-sm">Install</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div id="docs" class="hidden nav-content">
+          <div class="nav-inner-content">
+            <nav class="flex gap-6 border-b border-gray-700 pb-2 mb-4">
+              <button data-section="official-docs" class="tab-btn active-tab">
+                Official docs
+              </button>
+              <button data-section="docs-resources" class="tab-btn">
+                resources
+              </button>
+            </nav>
 
-        <div id="marketplace" class="hidden nav-content">marketplace Section</div>
-        <div id="docs" class="hidden nav-content">docs Section</div>
-        <div id="settings" class="hidden nav-content">settings Section</div>
+            <div id="official-docs" class="docs-content">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Sample Doc Card -->
+                <div class="bg-gray-800 p-4 rounded-2xl shadow-md flex flex-col justify-between">
+                  <div class="h-24 w-full bg-gradient-to-r from-blue-500 to-indigo-600 mb-4 rounded-lg"></div>
+                  <h3 class="text-xl font-bold text-white mb-2">Docs v1</h3>
+                  <p class="text-sm text-gray-300 mb-3">Engine Version: R2D v1</p>
+                  <p class="text-sm text-gray-400 mb-3">Size: 10MB</p>
+                  <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg self-end">
+                    Install
+                  </button>
+                </div>
+            
+                <div class="bg-gray-800 p-4 rounded-2xl shadow-md flex flex-col justify-between">
+                  <div class="h-24 w-full bg-gradient-to-r from-purple-500 to-pink-600 mb-4 rounded-lg"></div>
+                  <h3 class="text-xl font-bold text-white mb-2">Docs v2</h3>
+                  <p class="text-sm text-gray-300 mb-3">Engine Version: R2D v2</p>
+                  <p class="text-sm text-gray-400 mb-3">Size: 15MB</p>
+                  <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg self-end">
+                    Installed
+                  </button>
+                </div>
+            
+                
+              </div>
+            </div>
+            
+            <div id="docs-resources" class="hidden docs-content">
+              <div class="template">
+                <div class="template-thumbnail"></div>
+                <div class="flex flex-col">
+                  <div class="flex flex-col gap-1">
+                    <p class="template-source">official</p>
+                    <p class="template-title">Input events</p>
+                  </div>
+                  <p class="template-description">
+                    a detailed documentation on input systems and bindings
+                  </p>
+                </div>
+                <div class="flex flex-col">
+                  <div class="template-status">install</div>
+                  <div class="template-author"><span>by</span> R2D</div>
+                </div>
+                <div class="template-download-bar">
+                  <div class="template-download-progress"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="settings" class="hidden nav-content">
+          <div class="nav-inner-content">
+            <nav class="flex gap-6 border-b border-gray-700 pb-2 mb-4">
+              <button data-section="settings-appearance" class="tab-btn active-tab">
+                appearance
+              </button>
+              <button data-section="settings-editor" class="tab-btn">
+                editor
+              </button>
+              <button data-section="settings-project" class="tab-btn">
+                project
+              </button>
+              <button data-section="settings-marketplace" class="tab-btn">
+                marketplace
+              </button>
+              <button data-section="settings-updates" class="tab-btn">
+                updates
+              </button>
+              <button data-section="settings-plugins" class="tab-btn">
+                plugins & extensions
+              </button>
+            </nav>
+          </div>
+        </div>
+
         <div id="help" class="hidden nav-content">help Section</div>
       </section>
     </main>

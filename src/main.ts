@@ -1,5 +1,6 @@
 import { invoke } from "@tauri-apps/api/core";
 import { init_launchpad_events } from "./utils/events";
+import { launchLaunchPad } from "./utils/launchPad";
 
 let greetInputEl: HTMLInputElement | null;
 let greetMsgEl: HTMLElement | null;
@@ -22,4 +23,6 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-init_launchpad_events()
+// Let's go!
+await launchLaunchPad().catch(console.error); 
+await init_launchpad_events()
